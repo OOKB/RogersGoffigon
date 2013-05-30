@@ -1,3 +1,5 @@
+# Notes/Questions for May 30, 2013 Phonecall
+
 The goal of approaching the project in the proposed manner is to try and make upkeep as simple and painless as possible.
 
 So, of the list on page 6, what is actually stored in the inventory system? — I already know that images are not, but what of the rest of that potential data can be mined directly from the existing system/structure?
