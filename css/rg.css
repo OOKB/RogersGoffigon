@@ -80,7 +80,13 @@ footer {
 
 /* Styles for jquery carousel*/
 .cycle-slideshow{
-  width: 100%;
+  width: 101%;
+}
+@media screen and (max-width: 767px){
+  .cycle-slideshow{
+  width: 120%;
+  margin-left: -10%;
+}
 }
 .cycle-carousel-wrap img{
   padding-right: 5px;
