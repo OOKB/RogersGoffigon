@@ -52,8 +52,28 @@
       <div class="row">
         <p class="span4 offset4 text-centered">Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</p>
       </div>
-    </main>
-
+      <div class="collection-content">
+      <div id="prev">&#60;</div>
+      <div id="next">&#62;</div>
+      <h3 class="text-centered">Sheers</h2>
+      </main>
+        <div class="cycle-slideshow" 
+          data-cycle-fx=carousel 
+          data-cycle-timeout=5000 
+          data-cycle-carousel-visible=3 
+          data-cycle-carousel-fluid=true
+          data-cycle-next="#next"
+          data-cycle-prev="#prev"
+        >
+          <img src="http://jquery.malsup.com/cycle2/images/beach1.jpg">
+          <img src="http://jquery.malsup.com/cycle2/images/beach2.jpg">
+          <img src="http://jquery.malsup.com/cycle2/images/beach3.jpg">
+          <img src="http://jquery.malsup.com/cycle2/images/beach4.jpg">
+          <img src="http://jquery.malsup.com/cycle2/images/beach5.jpg">
+          <img src="http://jquery.malsup.com/cycle2/images/beach6.jpg">
+          <img src="http://jquery.malsup.com/cycle2/images/beach9.jpg">
+        </div>
+      </div>
     <footer class="container">
       <div class="row">
         <p>&copy; Rogers & Goffigon 2013</p>
@@ -71,6 +91,7 @@
     <script src="js/bootstrap.min.js"></script>
 <!--     <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script> -->
     <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/jquery.cycle2.carousel.min.js"></script>
 
   </body>
 </html>

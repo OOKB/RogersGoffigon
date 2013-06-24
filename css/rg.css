@@ -8,7 +8,6 @@ body {
 footer {
   text-align: center;
 }
-
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
@@ -37,7 +36,6 @@ footer {
 
 /* Customize the navbar links to be fill the entire space of the .navbar */
 .masthead nav > ul {
-  border-top: 1px solid black;
   margin-top: 40px;
   padding: 0 0 10px 0;
   list-style: none;
@@ -49,25 +47,58 @@ footer {
   margin: 0;
   text-align: center;
   text-transform: uppercase;
+  border-top: #000000 solid 2px;
+  padding: 4px 0px;
+  font-weight: 500;
+}
+.masthead nav ul li a{
+  color: #000000;
+  font-family: serif;
 }
 
-.masthead nav ul.navbar > li {
+/*.masthead nav ul.navbar > li {
   border-bottom: 1px solid black;
   padding: 10px 0;
-}
+}*/
 
 .masthead nav ul li ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: none;
+  padding: 8px 0px 0px;
 }
 
 .masthead nav ul li ul li {
   display: inline-block;
-  margin: 0 25px; 
+  margin: 0 14px; 
+  border-top: none;
+}
+.masthead nav ul li:hover > ul{
+  display: block
 }
 
-
+/* Styles for jquery carousel*/
+.cycle-slideshow{
+  width: 100%;
+}
+.cycle-carousel-wrap img{
+  padding-right: 5px;
+}
+.collection-content{
+  border-top: 2px solid #000000;
+}
+#next,#prev{
+  cursor: pointer;
+  display: inline-block;
+  font-size: 30px;
+}
+#prev{
+  float: left;
+}
+#next{
+  float: right;
+}
 /* CUSTOM HEADER STYLES FOR SKELETON MOCKUP */
 .masthead h3 {
   background: white;
