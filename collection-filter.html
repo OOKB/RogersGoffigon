@@ -55,11 +55,14 @@
         <div id="prev">&#60;</div>
         <div id="next">&#62;</div>
         <div class="text-centered">
+          <div class="filter" data-filter="all">all</div>
+          <div class="filter" data-filter="linen">linen</div>
+          <div class="filter" data-filter="wool">wool</div>
           <h3>Sheers</h2>
         </div>  
       </div>
     </main>
-        <div class="cycle-slideshow"
+        <div class="cycle-slideshow" id="Grid"
           data-cycle-fx=carousel 
           data-cycle-timeout=5000 
           data-cycle-carousel-visible=3 
@@ -68,13 +71,13 @@
           data-cycle-prev="#prev"
         >
           
-              <img src="http://jquery.malsup.com/cycle2/images/beach1.jpg">
-              <img src="http://jquery.malsup.com/cycle2/images/beach2.jpg">
-              <img src="http://jquery.malsup.com/cycle2/images/beach3.jpg">
-              <img src="http://jquery.malsup.com/cycle2/images/beach4.jpg">
-              <img src="http://jquery.malsup.com/cycle2/images/beach5.jpg">
-              <img src="http://jquery.malsup.com/cycle2/images/beach6.jpg">
-              <img src="http://jquery.malsup.com/cycle2/images/beach9.jpg">
+              <img class="mix linen" src="http://jquery.malsup.com/cycle2/images/beach1.jpg">
+              <img class="mix cashmere" src="http://jquery.malsup.com/cycle2/images/beach2.jpg">
+              <img class="mix wool" src="http://jquery.malsup.com/cycle2/images/beach3.jpg">
+              <img class="mix alpaca" src="http://jquery.malsup.com/cycle2/images/beach4.jpg">
+              <img class="mix linen" src="http://jquery.malsup.com/cycle2/images/beach5.jpg">
+              <img class="mix cashmere" src="http://jquery.malsup.com/cycle2/images/beach6.jpg">
+              <img class="mix wool" src="http://jquery.malsup.com/cycle2/images/beach9.jpg">
     
         </div>
       </div>
@@ -96,5 +99,18 @@
 <!--     <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script> -->
     <script src="js/jquery.cycle2.min.js"></script>
     <script src="js/jquery.cycle2.carousel.min.js"></script>
+    <!-- Mix it up docs found at http://mixitup.io/#Demos -->
+    <script src="js/jquery.mixitup.js"></script>
+    <script>
+        $(function(){
+     
+          $('#Grid').mixitup({
+            targetSelector: '.mix',
+            filterSelector: '.filter',
+          
+          });
+     
+        });
+    </script>
   </body>
 </html>

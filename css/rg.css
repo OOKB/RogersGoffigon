@@ -8,6 +8,14 @@ body {
 footer {
   text-align: center;
 }
+main{
+  display: block;
+}
+/* Styles for filter*/
+#Grid .mix{
+    opacity: 0;
+    display: none;
+}
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;

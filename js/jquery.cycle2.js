@@ -638,7 +638,7 @@ $.fn.cycle.defaults = {
     slideActiveClass: 'cycle-slide-active',
     slideClass:       'cycle-slide',
     slideCss:         { position: 'absolute', top: 0, left: 0 },
-    slides:          '> img',
+    slides:          '> li',
     speed:            500,
     startingSlide:    0,
     sync:             true,
@@ -1096,7 +1096,7 @@ $(document).on( 'cycle-bootstrap', function( e, opts ) {
         slides.hide().appendTo('body').each(function(i) { // appendTo fixes #56
             var count = 0;
             var slide = $(this);
-            var images = slide.is('img') ? slide : slide.find('img');
+            var images = slide.is('li') ? slide : slide.find('li');
             slide.data('index', i);
             // allow some images to be marked as unimportant (and filter out images w/o src value)
             images = images.filter(':not(.cycle-loader-ignore)').filter(':not([src=""])');
