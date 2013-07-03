@@ -7,16 +7,22 @@
   <body>
     <div id="l-collection">
        <ul id="collection">
-            <li id="linen"></li>
+            <li class="linen"></li>
+            <li class="alpaca"></li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="linen"></li>
+            <li class="alpaca"></li>
             <li></li>
         </ul>
     </div>
-    <a href="#" onclick="toggle_display('linen');">Click here to toggle visibility of element #foo</a>
-    <!-- Link to Jquery -->
+    <div id="filter">
+    	<ul>
+    		<li><a href="javascript:void(0)" rel = "all">All</a></li>
+    		<li><a href="javascript:void(0)" rel = "linen">Linen</a></li>
+    		<li><a href="javascript:void(0)" rel = "alpaca">Alpaca</a></li>
+    	</ul>
+    </div>
+    <!-- Link to jQuery -->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>    
     <!-- Custom Javascript -->
     <script src="js/rg.js" type="text/javascript"></script>

@@ -20,10 +20,8 @@ $(window).load(function(){
   //Setting the size of the #Collection
   $('#collection').width(liW * howmany);
   
-  console.log(ww);
-  console.log(liW);
-  console.log(liH);
-  console.log(howmany);
+  // Adding display block on load to list elements
+  $('#collection li').css('display', 'block');
   
 });
 
@@ -55,11 +53,16 @@ $(window).resize(function(){
   
 });
 
-//Toggle display function
-    function toggle_display(id) {
-       var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-    }
+		
+$('#filter ul li a').click(function(){
+		var data = $(this).attr('rel');
+		if(data == 'all'){
+			$('#collection li').show();
+		}
+		else {
+			$('#collection li').hide();
+			$('#collection li'+'.' + data).show();
+		}
+		return false;
+	});
+	
