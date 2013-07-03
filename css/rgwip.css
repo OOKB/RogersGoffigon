@@ -25,7 +25,3 @@ ul#collection li:nth-child(2n+2) {
   background-color: aqua;
 }
 /* STATES */
-.linen{
-  background-color: grey !important;
-  display: block;
-}
