@@ -17,3 +17,14 @@ company that built their system: [http://www.pdfsystems.com/]()
 =====
 
 As for the images, we will be coming up with a solution for those, and the idea was that the main content creation act is uploading a new image and giving it the correct sku/item#. In a perfect scenario, most of the rest of the required information lives in the inv. management system and is merely pulled in. Depending on the actual case, then the other various categories, tags, etc. would be added to the image as some sort of Meta Data in the content creation phase.
+
+=====
+
+## Questions about carousel/ filter functionality
+
+Do we need to be able to select more then one filter at once?
+Does the carousel still function when there is < 3 images?
+Does the carousel show more/less then 3 images in the main window at different screen sizes?
+
+
+

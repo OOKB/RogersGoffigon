@@ -18,10 +18,14 @@ $(window).load(function(){
   $('#l-collection').css('height', ((ww/30)*10));
   
   //Setting the size of the #Collection
-  $('#collection').width(liW * howmany);
+  $('#collection').width((liW * howmany)+(howmany * 10));
   
   // Adding display block on load to list elements
   $('#collection li').css('display', 'block');
+  
+  //Appending how many
+  var html = '<p>' + howmany + '</p>';
+  $('.pagination').append(html);
   
 });
 
@@ -46,13 +50,9 @@ $(window).resize(function(){
   //Setting the size of the #Collection
   $('#collection').width(liW * howmany);
   
-  console.log(ww);
-  console.log(liW);
-  console.log(liH);
-  console.log(howmany);
-  
 });
 
+// Filter Function
 		
 $('#filter ul li a').click(function(){
 		var data = $(this).attr('rel');
@@ -65,4 +65,35 @@ $('#filter ul li a').click(function(){
 		}
 		return false;
 	});
-	
+
+// ============== Carousel Functionality ============//
+
+//(code adapted gracefully from http://web.enavu.com/tutorials/making-a-jquery-infinite-carousel-with-nice-features/)
+	 
+	 //Slide function
+	 function slide(where){
+  	 //getting the width
+  	 var liW = $('#collection li').width();
+  	 
+  	 //Using if to check for left or right slide
+  	 if (where == 'left'){
+    	 //calculate the left indent of the ul for left slide
+    	 var left_indent = parseInt($('ul#collection').css('left')) + liW;
+  	 } else {
+  	   //calculate the left indent of the ul for right slide
+    	 var left_indent = parseInt($('ul#collection').css('left')) - liW;
+  	 }
+  	 
+  	 //Animating the sliding effect
+  	 $('ul#collection:not(:animated)').animate({ "left" : "left_indent" },300,
+  	   function(){
+    	 if (where == 'left'){
+    	   $('ul#collection li:first').before($('ul#collection li:last'));
+    	 }else{
+      	 $('ul#collection li:last').after($('ul#collection li:first'));
+    	 }
+    	 
+    	// $('ul#collection').css('left','-'liW);
+    	 
+  	 });
+	 }

@@ -8,7 +8,7 @@ li{
 
 /* LAYOUT */
 #l-collection{
-  overflow: scroll;
+  overflow: hidden;
 }
 
 /* MODULES */
@@ -17,11 +17,45 @@ li{
 #collection ul{
 }
 ul#collection li {
-  background-color: fuchsia;
   float: left;
   display: block;
+  overflow: hidden;
+  margin-right: 10px;
 }
-ul#collection li:nth-child(2n+2) {
+.cotton{
+  background-color: grey;
+}
+.horsehair{
   background-color: aqua;
 }
+.wool{
+  background-color: fuchsia;
+}
+.alpaca{
+  background-color: navy;
+}
+.linen{
+  background-color: red;
+}
+#filter{}
+.collection-panel *:not(li){
+  display: inline-block;
+}
+.pagination p + p:before{
+  content: "/ ";
+}
 /* STATES */
+#filter > ul{
+  height: 0px;
+  width: 100px;
+  overflow: hidden;
+  position: absolute;
+  background-color: white;
+  transition-duration: 5s;
+  -webkit-transition-duration: 5s;
+}
+#filter:hover > ul{
+  height: auto;
+  transition-duration: 5s;
+  -webkit-transition-duration: 5s;
+}
