@@ -4,7 +4,9 @@ body {
   padding-top: 20px;
   padding-bottom: 60px;
 }
-
+li{
+  list-style-type: none;
+}
 footer {
   text-align: center;
 }
@@ -86,33 +88,72 @@ main{
   display: block
 }
 
-/* Styles for jquery carousel*/
-.cycle-slideshow{
-  width: 101%;
+/* ===== Styles for jquery carousel ===== */
+/* LAYOUT */
+#l-collection{
+  overflow: hidden;
 }
-@media screen and (max-width: 767px){
-  .cycle-slideshow{
-  width: 120%;
-  margin-left: -10%;
+
+/* MODULES */
+#collection{
 }
+#collection ul{
 }
-.cycle-carousel-wrap img{
-  padding-right: 5px;
-}
-.collection-content{
-  border-top: 2px solid #000000;
-}
-#next,#prev{
-  cursor: pointer;
-  display: inline-block;
-  font-size: 30px;
-}
-#prev{
+ul#collection li {
   float: left;
+  display: block;
+  overflow: hidden;
+  margin-right: 10px;
 }
-#next{
+.cotton{
+  background-color: grey;
+}
+.horsehair{
+  background-color: aqua;
+}
+.wool{
+  background-color: fuchsia;
+}
+.alpaca{
+  background-color: navy;
+}
+.linen{
+  background-color: red;
+}
+#filter{}
+.collection-panel{
+  border-top: 2px solid black;
+  text-align: center;
+}
+.collection-panel *:not(li){
+  display: inline-block;
+}
+.pagination p + p:before{
+  content: "/ ";
+}
+#rightarrow{
   float: right;
 }
+#leftarrow{
+  float: left;
+}
+/* STATES */
+#filter > ul{
+  height: 0px;
+  width: 100px;
+  overflow: hidden;
+  position: absolute;
+  background-color: white;
+  transition-duration: 5s;
+  -webkit-transition-duration: 5s;
+}
+#filter:hover > ul{
+  height: auto;
+  transition-duration: 5s;
+  -webkit-transition-duration: 5s;
+}
+/* ===== Styles for jquery carousel ===== */
+
 /* CUSTOM HEADER STYLES FOR SKELETON MOCKUP */
 .masthead h3 {
   background: white;

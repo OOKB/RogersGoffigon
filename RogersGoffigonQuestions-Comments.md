@@ -24,7 +24,7 @@ As for the images, we will be coming up with a solution for those, and the idea 
 
 Do we need to be able to select more then one filter at once?
 Does the carousel still function when there is < 3 images?
-Does the carousel show more/less then 3 images in the main window at different screen sizes?
+Does the carousel show more/less then 3 images in the main window at different screen sizes? 5 for >1200px, 1 for < 450px?
 
 
 
