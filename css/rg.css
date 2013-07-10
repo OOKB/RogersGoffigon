@@ -85,6 +85,34 @@ main{
 .masthead nav ul li:hover > ul{
   display: block
 }
+
+/* Styles for jquery carousel*/
+.cycle-slideshow{
+  width: 101%;
+}
+@media screen and (max-width: 767px){
+  .cycle-slideshow{
+  width: 120%;
+  margin-left: -10%;
+}
+}
+.cycle-carousel-wrap img{
+  padding-right: 5px;
+}
+.collection-content{
+  border-top: 2px solid #000000;
+}
+#next,#prev{
+  cursor: pointer;
+  display: inline-block;
+  font-size: 30px;
+}
+#prev{
+  float: left;
+}
+#next{
+  float: right;
+}
 /* CUSTOM HEADER STYLES FOR SKELETON MOCKUP */
 .masthead h3 {
   background: white;
@@ -93,69 +121,3 @@ main{
 }
 
 .text-centered { text-align: center; }
-/* STYLES FOR COLLECTION CAROUSEL*/
-/* LAYOUT */
-#l-collection{
-  overflow: hidden;
-  width: 100%;
-}
-@media screen and (max-width:767px){
-  #l-collection{
-  }
-  #collection{
-  margin-left: -30px;
-}
-}
-/* MODULES */
-#collection{
-  margin-left: -10px;
-}
-#collection ul{
-}
-ul#collection li {
-  float: left;
-  display: block;
-  overflow: hidden;
-  margin-right: 10px;
-}
-.cotton{
-  background-color: grey;
-}
-.horsehair{
-  background-color: aqua;
-}
-.wool{
-  background-color: fuchsia;
-}
-.alpaca{
-  background-color: navy;
-}
-.linen{
-  background-color: red;
-}
-#filter{}
-.collection-panel{
-  border-top: 2px solid black;
-}
-.collection-panel *:not(li){
-  display: inline-block;
-  text-align: center;
-}
-.pagination p + p:before{
-  content: "/ ";
-}
-/* STATES */
-#filter > ul{
-  height: 0px;
-  width: 100px;
-  overflow: hidden;
-  position: absolute;
-  background-color: white;
-  transition-duration: 5s;
-  -webkit-transition-duration: 5s;
-}
-#filter:hover > ul{
-  height: auto;
-  transition-duration: 5s;
-  -webkit-transition-duration: 5s;
-}
