@@ -64,8 +64,32 @@ $(window).resize(function(){
 });
 
 // Filter Function
+  
+/*
   //Toggle active class on clicked
-  var filterInput = $("#filter ul li a");
+  var filterInput = $("#filter ul li");
+  var checks = document.getElementsByTagName('input');
+  
+  filterInput.click( function(){
+    var all = document.getElementById('all');
+    var data = $(this).attr('rel');
+    
+    // For every check on the page
+    for (var i=0; i< checks.length; i++) {
+      if( checks[i].checked == true) {
+        $(this).toggleClass('active');
+      }
+    }
+    //show on class active, hide others
+    if(data == 'all'){
+		    $('#collection li').show();
+		} else if( $(filterInput).hasClass('active') ) {
+  		  $('#collection li'+'.' + data).show();
+		} else {
+  		  $('#collection li').hide();
+  		}
+});
+ 
   filterInput.click(function () {
       $(this).toggleClass("active");
   });
@@ -82,6 +106,7 @@ $(window).resize(function(){
   		}
   		return false;
 	});
+*/
 
 // ============== Carousel Functionality ============//
 
@@ -102,14 +127,14 @@ $(window).resize(function(){
   	 }
   	 
   	 //Animating the sliding effect
-  	 $('ul#collection').animate({ left: '+='+left_indent },0,function()
+  	 $('ul#collection').animate({ left: left_indent },0,function()
   	 {  
     	 if (where == 'left'){
     	   $('ul#collection li:first').before($('ul#collection li:last'));
     	 }else{
       	 $('ul#collection li:last').after($('ul#collection li:first'));
     	 }
-    	$('ul#collection').css('left','-'+liW);
+    	// $('ul#collection').css('left','-'liW);
     	 
   	 });
 	 }

@@ -93,13 +93,13 @@ main{
 #collection{
 }
 ul#collection{
-  position: relative;
 }
 ul#collection li {
   float: left;
   display: block;
   overflow: hidden;
   margin-right: 10px;
+  position: relative;
 }
 .cotton{
   background-color: grey;
