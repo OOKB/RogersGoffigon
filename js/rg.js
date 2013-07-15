@@ -23,12 +23,23 @@ $(window).load(function(){
   // Adding display block on load to list elements
   $('#collection li').css('display', 'block');
   
-  //Appending how many
-  var html = '<p>' + howmany + '</p>';
-  $('.pagination').append(html);
-  
 });
-
+/* 
+  function outOf(){
+    var howmany = $('#collection').find('li').length;
+    var html = '<p>' + howmany + '</p>';
+    e.preventDefault();
+    $('.pagination').load('<p>' + howmany + '</p>');
+  }
+  outOf();
+*/
+  
+    //add class to second li
+  $('#collection li:nth-child(2)').addClass('current');
+  var current = $('#collection li:nth-child(2)');
+  var consoleThis = $('li').index(current);
+  
+  
 //Maintaining Heights and Widths on resize
 $(window).resize(function(){
   //Declaring Variables
@@ -53,19 +64,29 @@ $(window).resize(function(){
 });
 
 // Filter Function
-		
-$('#filter ul li a').click(function(){
-		var data = $(this).attr('rel');
-		if(data == 'all'){
-			$('#collection li').show();
-		}
-		else {
-			$('#collection li').hide();
-			$('#collection li'+'.' + data).show();
-		}
-		return false;
-	});
+  //Toggle active class on clicked
+		$("#filter ul li a").click(function () {
+      $(this).toggleClass("active");
+    });
 
+    $('#filter ul li a').click(function(){
+		  var data = $(this).attr('rel');
+		  if(data == 'all'){
+			   $('#collection li').show();
+			   $('.active').removeClass('active');
+			 } else if( $(this).hasClass('active') ){
+  			 $('#collection li'+'.' + data).show();
+			 } else{
+  			 $('#collection li').hide();
+  		}
+  		return false;
+	});
+/*
+  // Filter Function
+    //Toggle active class on clicked
+		$("#filter ul li a").click(function () {
+      $(this).toggleClass("active");
+*/
 // ============== Carousel Functionality ============//
 
 //(code adapted gracefully from http://web.enavu.com/tutorials/making-a-jquery-infinite-carousel-with-nice-features/)
@@ -85,14 +106,13 @@ $('#filter ul li a').click(function(){
   	 }
   	 
   	 //Animating the sliding effect
-  	 $('ul#collection:not(:animated)').animate({ "left" : "left_indent" },300,
-  	   function(){
+  	 $('ul#collection').animate({ left: left_indent },'fast',function()
+  	 {  
     	 if (where == 'left'){
     	   $('ul#collection li:first').before($('ul#collection li:last'));
     	 }else{
       	 $('ul#collection li:last').after($('ul#collection li:first'));
     	 }
-    	 
     	// $('ul#collection').css('left','-'liW);
     	 
   	 });
