@@ -76,8 +76,10 @@ main{
 
 .masthead nav ul li ul li {
   display: inline-block;
-  margin: 0 14px; 
   border-top: none;
+}
+.masthead nav ul li ul li + li{
+  margin-left: 14px;
 }
 .masthead nav ul li:hover > ul{
   display: block

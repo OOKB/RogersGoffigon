@@ -1,0 +1,150 @@
+/* BASE */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+}
+li{
+  list-style-type: none;
+}
+body{
+  background-color: rgb(249, 249, 249);
+}
+/* LAYOUT */
+.container{
+  max-width: 900px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; 
+}
+.container div, .container ul, .container section{
+  margin-left: auto;
+  margin-right: auto; 
+}
+header{
+  margin: 30px 0;
+}
+nav{
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+/* MODULES */
+.branding{
+  width: intrinsic;
+  padding: 20px;
+  box-shadow: 0px 2px 8px rgb(239,239,239);
+  background-color: #ffffff;
+}
+/* Navigation */
+nav ul{
+  width: 250px;
+  overflow: visible;
+}
+nav ul li{
+  border-top: 2px solid #000000;
+  padding: 4px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+nav ul li a{
+  color: #000000;
+  text-decoration: none;
+}
+nav ul li > ul li {
+  display: inline-block;
+  border: none;
+}
+nav ul li > ul li + li{
+  margin-left: 14px;
+}
+nav ul li > ul{
+  display: none;
+  width: auto;
+  background-color: aqua;
+  padding: 8px 0 0;
+}
+nav ul li:hover > ul{
+  display: block
+}
+/* COLLECTION CAROUSEL STYLE */
+ul#collection li {
+  float: left;
+  display: block;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.cotton{
+  background-color: grey;
+}
+.horsehair{
+  background-color: aqua;
+}
+.wool{
+  background-color: fuchsia;
+}
+.alpaca{
+  background-color: navy;
+}
+.linen{
+  background-color: red;
+}
+/* SECTIONS*/
+.large-type{
+  margin-top: 150px;
+  width: 80%;
+  text-align: center;
+}
+.large-type p{
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+.large-type em{
+  font-style: italic;
+}
+.large-image{
+  /*Note: Dont Wrap in Container*/
+  width: 100%;
+}
+.body-type{
+  width: 400px;
+  margin-top: 150px;
+  text-align: center;  
+}
+.body-type p{
+  font-size: 13px;
+  line-height: 23px;
+}
+/* BIG LIST */
+.big-list{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.big-list dt{
+  border-top: 2px solid #000000;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.big-list dt a{
+  color: #000000;
+  text-decoration: none;
+}
+/* TYPOGRAPHY */
+h1{
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+footer p{
+  display: block;
+  padding: 4px 0px;
+  font-size: 12px;
+}
+
+/* STATES */
+footer .container{
+  width: 400px;
+  border-top: 2px solid #000000;
+  padding-top: 8px; 
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
