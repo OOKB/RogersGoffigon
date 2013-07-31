@@ -8,6 +8,14 @@ li{
 body{
   background-color: rgb(249, 249, 249);
 }
+a{
+  color: #000000;
+  text-decoration: none;
+}
+.clear{
+  clear: both;
+  margin: 0px;
+}
 /* LAYOUT */
 .container{
   max-width: 900px;
@@ -44,10 +52,6 @@ nav ul li{
   text-transform: uppercase;
   text-align: center;
 }
-nav ul li a{
-  color: #000000;
-  text-decoration: none;
-}
 nav ul li > ul li {
   display: inline-block;
   border: none;
@@ -63,28 +67,6 @@ nav ul li > ul{
 }
 nav ul li:hover > ul{
   display: block
-}
-/* COLLECTION CAROUSEL STYLE */
-ul#collection li {
-  float: left;
-  display: block;
-  overflow: hidden;
-  margin-right: 10px;
-}
-.cotton{
-  background-color: grey;
-}
-.horsehair{
-  background-color: aqua;
-}
-.wool{
-  background-color: fuchsia;
-}
-.alpaca{
-  background-color: navy;
-}
-.linen{
-  background-color: red;
 }
 /* SECTIONS*/
 .large-type{
@@ -120,14 +102,51 @@ ul#collection li {
   margin-right: auto;
   text-align: center;
 }
+/* COLLECTION CAROUSEL STYLE */
+ul.collection li {
+  float: left;
+  display: block;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.cotton{
+  background-color: grey;
+}
+.horsehair{
+  background-color: aqua;
+}
+.wool{
+  background-color: fuchsia;
+}
+.alpaca{
+  background-color: navy;
+}
+.linen{
+  background-color: red;
+}
 .big-list dt{
   border-top: 2px solid #000000;
   padding: 10px 0;
   text-transform: uppercase;
 }
-.big-list dt a{
-  color: #000000;
-  text-decoration: none;
+.big-list dd{
+  padding-bottom: 38px;
+}
+/* COLLECTION PANEL*/
+.collection-panel{
+  padding: 10px 0;
+  margin-top: -38px;
+}
+.leftarrow{
+  float: left;
+}
+.rightarrow{
+  float: right;
+}
+/* TEMPORARY SEARCH ICON */
+.icon-search{
+  background-image: url('img/glyphicons-halflings.png');
+  background-position: -48px 0;
 }
 /* TYPOGRAPHY */
 h1{
