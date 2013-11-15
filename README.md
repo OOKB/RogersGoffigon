@@ -1,7 +1,7 @@
 RogersGoffigon
 ==============
 
-working on some ideas... not much to tell currently
+Working on some ideas... Not much to tell currently.
 
 A make.cape file has been created. See http://rg.cape.io
 
